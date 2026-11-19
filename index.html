@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pascabowo Pass — Free Mint for Agent ID Holders</title>
+  <meta name="description" content="Pascabowo Pass: a free collectible badge for Agent ID holders. One Agent ID. One free mint. No bots, no farming.">
+  <meta property="og:title" content="Pascabowo Pass — One Agent ID. One free mint.">
+  <meta property="og:description" content="A free collectible badge proving you hold an Agent ID. 1 per wallet, free to mint (only BNB gas).">
+  <meta property="og:image" content="social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="preview.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot"></span>
+        <div>PASCABOWO PASS<small>FREE MINT &middot; AGENT ID GATED</small></div>
+        <span class="network-pill" id="networkPill">BNB Smart Chain</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Pascabowo <span>Pass</span></h1>
+          <p class="tagline">One Agent ID. One free mint. No bots, no farming.</p>
+          <p class="lede">
+            Pascabowo Pass is a free collectible badge proving you hold an Agent ID.
+            Only Agent ID holders can mint, and each wallet can mint exactly one —
+            so the badge can&rsquo;t be farmed by bots or sybils.
+          </p>
+          <p class="lede">
+            Minting is free. You only pay the BNB network gas for the transaction.
+          </p>
+          <p class="disclaimer">
+            This badge has no monetary value promised and is not an investment.
+          </p>
+        </div>
+        <div class="hero-art">
+          <img src="preview.svg" alt="Pascabowo Pass badge — dark navy card with a gold shield and check mark" width="600" height="750">
+        </div>
+      </section>
+
+      <section class="mint-card" id="mintCard">
+        <h2>Mint your Pass</h2>
+        <p class="sub">Connect your wallet to check your Agent ID and mint. No sign-up, no seed phrase, no private key — ever.</p>
+
+        <div class="status-grid">
+          <div class="status-box">
+            <div class="label">Agent ID</div>
+            <div class="value" id="agentIdStatus">—</div>
+          </div>
+          <div class="status-box">
+            <div class="label">Your mint</div>
+            <div class="value" id="mintedStatus">—</div>
+          </div>
+          <div class="status-box">
+            <div class="label">Minted</div>
+            <div class="value" id="supplyStatus">—</div>
+          </div>
+        </div>
+
+        <div class="wallet-row">
+          <button class="btn-gold" id="connectBtn" type="button">Connect Wallet</button>
+          <button class="btn-ghost" id="switchChainBtn" type="button" style="display:none">Switch to BNB Smart Chain</button>
+          <span class="address" id="walletAddress"></span>
+        </div>
+
+        <button class="btn-gold btn-mint" id="mintBtn" type="button" disabled>Mint — Free</button>
+
+        <div class="message" id="message" role="status"></div>
+
+        <div class="minted-nft" id="mintedNft">
+          <h3>Your Pascabowo Pass</h3>
+          <img id="mintedNftImg" src="preview.svg" alt="Your minted Pascabowo Pass NFT">
+          <p id="mintedNftMeta"></p>
+        </div>
+      </section>
+
+      <section class="how">
+        <h2>How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <h3>Hold an Agent ID</h3>
+            <p>Agent ID is a free identity badge on BNB Smart Chain. Claim yours in the Binance App if you don&rsquo;t have one yet.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <h3>Connect your wallet</h3>
+            <p>Use Binance Wallet or MetaMask (injected wallet only). The site checks your Agent ID balance on-chain.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <h3>Mint — free</h3>
+            <p>One mint per wallet, zero mint price. You only pay the BNB network gas, and the badge is yours.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <h2>Questions</h2>
+        <details>
+          <summary>What is an Agent ID?</summary>
+          <p>Agent ID is an on-chain identity token (ERC-721) on BNB Smart Chain. Pascabowo Pass reads your Agent ID balance on-chain — holding one is the only way to mint.</p>
+        </details>
+        <details>
+          <summary>How much does it cost?</summary>
+          <p>Nothing for the mint itself — the price is 0. You only pay the BNB network gas for the transaction.</p>
+        </details>
+        <details>
+          <summary>Can I mint more than one?</summary>
+          <p>No. The contract allows exactly 1 mint per wallet, enforced on-chain. A second mint from the same wallet will fail.</p>
+        </details>
+        <details>
+          <summary>Is this an investment?</summary>
+          <p>No. This badge has no monetary value promised and is not an investment. It is a free collectible proving you hold an Agent ID.</p>
+        </details>
+        <details>
+          <summary>Is the contract upgradeable or admin-controlled?</summary>
+          <p>No. The contract is fully immutable — there are no admin functions and no owner permissions. Nobody can change the rules, mint extra passes, or pause it after deployment.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <div class="links">
+        <a id="passContractLink" href="#" target="_blank" rel="noopener">Pass contract on BscScan</a>
+        <a id="agentIdContractLink" href="#" target="_blank" rel="noopener">Agent ID contract on BscScan</a>
+        <a id="announcementLink" href="https://www.binance.com/en/support/announcement/detail/95f5dbe0ea674a48a739b59e046648bf" target="_blank" rel="noopener">Hackathon announcement</a>
+      </div>
+      <p>Pascabowo Pass — a free collectible badge for Agent ID holders. 1 per wallet, free to mint (only BNB gas).</p>
+      <p>This badge has no monetary value promised and is not an investment.</p>
+    </footer>
+  </div>
+
+  <!-- Vendored locally — zero runtime CDN dependency. -->
+  <script src="ethers.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

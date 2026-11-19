@@ -1,0 +1,181 @@
+:root {
+  --navy: #0b1020;
+  --navy-2: #121a35;
+  --navy-3: #1a2342;
+  --gold: #f0b90b;
+  --gold-soft: #f8d34a;
+  --white: #ffffff;
+  --muted: #9aa3c0;
+  --green: #2fbf71;
+  --red: #e5484d;
+  --border: rgba(240, 185, 11, 0.35);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--gold); }
+a:hover { color: var(--gold-soft); }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Header ---------- */
+header { padding: 28px 0 8px; }
+.brand {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 20px; font-weight: 700; letter-spacing: 2px;
+}
+.brand .dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--gold); display: inline-block;
+}
+.brand small {
+  display: block; font-size: 12px; font-weight: 400;
+  letter-spacing: 1px; color: var(--muted);
+}
+.network-pill {
+  margin-left: auto; font-size: 13px; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px;
+  white-space: nowrap;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px;
+  align-items: center; padding: 36px 0 48px;
+}
+@media (max-width: 760px) { .hero { grid-template-columns: 1fr; } }
+
+.hero h1 {
+  font-size: 52px; line-height: 1.05; margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+.hero h1 span { color: var(--gold); }
+.tagline {
+  font-size: 20px; font-weight: 600; color: var(--gold-soft); margin: 0 0 16px;
+}
+.lede { color: #d6dbef; margin: 0 0 12px; }
+.disclaimer {
+  font-size: 14px; color: var(--muted);
+  border-left: 3px solid var(--gold); padding-left: 12px; margin: 16px 0 0;
+}
+.hero-art img {
+  width: 100%; max-width: 380px; display: block; margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* ---------- Mint card ---------- */
+.mint-card {
+  background: var(--navy-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 40px;
+}
+.mint-card h2 { margin: 0 0 4px; font-size: 24px; }
+.mint-card .sub { color: var(--muted); margin: 0 0 20px; font-size: 15px; }
+
+.status-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin-bottom: 20px;
+}
+@media (max-width: 640px) { .status-grid { grid-template-columns: 1fr; } }
+.status-box {
+  background: var(--navy-3); border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px; padding: 14px 16px;
+}
+.status-box .label {
+  font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 4px;
+}
+.status-box .value { font-size: 17px; font-weight: 700; }
+.status-box .value.ok { color: var(--green); }
+.status-box .value.no { color: var(--red); }
+.status-box .value.warn { color: var(--gold); }
+
+.wallet-row {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  margin-bottom: 16px;
+}
+.wallet-row .address {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14px; color: var(--gold-soft);
+}
+
+button {
+  font: inherit; cursor: pointer; border: none; border-radius: 10px;
+  padding: 12px 22px; font-weight: 700; font-size: 16px;
+}
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-gold { background: var(--gold); color: #111; }
+.btn-gold:hover:not(:disabled) { background: var(--gold-soft); }
+.btn-ghost {
+  background: transparent; color: var(--white);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover:not(:disabled) { border-color: var(--gold); }
+.btn-mint { width: 100%; padding: 15px; font-size: 18px; }
+
+.message {
+  margin-top: 16px; padding: 12px 14px; border-radius: 10px;
+  font-size: 15px; display: none;
+}
+.message.show { display: block; }
+.message.info { background: var(--navy-3); border: 1px solid rgba(255,255,255,.15); }
+.message.success { background: rgba(47, 191, 113, 0.15); border: 1px solid var(--green); }
+.message.error { background: rgba(229, 72, 77, 0.12); border: 1px solid var(--red); }
+.message .tx-link { word-break: break-all; }
+
+.minted-nft { margin-top: 20px; text-align: center; display: none; }
+.minted-nft.show { display: block; }
+.minted-nft img {
+  max-width: 320px; width: 100%; border-radius: 16px;
+  border: 1px solid var(--border);
+}
+.minted-nft p { color: var(--muted); font-size: 14px; }
+
+/* ---------- How it works ---------- */
+.how { margin-bottom: 40px; }
+.how h2, .faq h2 { font-size: 24px; margin-bottom: 16px; }
+.steps {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  counter-reset: step;
+}
+@media (max-width: 640px) { .steps { grid-template-columns: 1fr; } }
+.step {
+  background: var(--navy-2); border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius); padding: 20px;
+}
+.step .num {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--gold); color: #111; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+}
+.step h3 { margin: 0 0 6px; font-size: 17px; }
+.step p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.faq { margin-bottom: 48px; }
+.faq details {
+  background: var(--navy-2); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px; padding: 14px 18px; margin-bottom: 10px;
+}
+.faq summary { cursor: pointer; font-weight: 700; }
+.faq p { color: var(--muted); margin: 8px 0 0; }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px 0 40px; color: var(--muted); font-size: 14px;
+}
+footer .links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 12px; }
+footer p { margin: 4px 0; }

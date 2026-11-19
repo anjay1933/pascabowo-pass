@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="750" viewBox="0 0 600 750" role="img" aria-label="Pascabowo Pass badge">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#121A35"/>
+      <stop offset="100%" stop-color="#0B1020"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8D34A"/>
+      <stop offset="100%" stop-color="#F0B90B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card -->
+  <rect x="8" y="8" width="584" height="734" rx="28" fill="url(#bg)" stroke="#F0B90B" stroke-width="3"/>
+  <rect x="24" y="24" width="552" height="702" rx="20" fill="none" stroke="#F0B90B" stroke-width="1" opacity="0.35"/>
+
+  <!-- Top label -->
+  <text x="300" y="86" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="6" fill="#F0B90B">BNB SMART CHAIN</text>
+  <line x1="150" y1="108" x2="450" y2="108" stroke="#F0B90B" stroke-width="1" opacity="0.5"/>
+
+  <!-- Shield + check -->
+  <g transform="translate(300 300)">
+    <path d="M0 -130 L110 -85 L110 10 C110 80 60 125 0 150 C-60 125 -110 80 -110 10 L-110 -85 Z"
+          fill="none" stroke="url(#gold)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M0 -118 L98 -79 L98 10 C98 70 54 110 0 134 C-54 110 -98 70 -98 10 L-98 -79 Z"
+          fill="#F0B90B" opacity="0.12"/>
+    <path d="M-48 2 L-12 38 L52 -34" fill="none" stroke="#F0B90B" stroke-width="16"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="520" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" letter-spacing="4" fill="#FFFFFF">PASCABOWO</text>
+  <text x="300" y="580" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" letter-spacing="12" fill="#F0B90B">PASS</text>
+
+  <!-- Divider -->
+  <line x1="200" y1="612" x2="400" y2="612" stroke="#F0B90B" stroke-width="1" opacity="0.5"/>
+
+  <!-- Token id + verification -->
+  <text x="300" y="656" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="4" fill="#FFFFFF">#001</text>
+  <text x="300" y="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="3" fill="#F0B90B">AGENT ID VERIFIED &#10003;</text>
+</svg>
